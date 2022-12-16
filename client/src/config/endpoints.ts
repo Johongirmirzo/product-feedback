@@ -1,5 +1,5 @@
-const BASE_URL = "https://product-feedback-f9ey.onrender.com/api"
-const URL = "https://product-feedback-f9ey.onrender.com/";
+const BASE_URL = "https://product-feedback-ijkr.onrender.com/api"
+const URL = "https://product-feedback-ijkr.onrender.com/";
 
 const ENDPOINTS = {
     REGISTER_USER: "/auth/register",
