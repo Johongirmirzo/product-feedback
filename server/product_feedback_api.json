@@ -1,0 +1,479 @@
+{
+  "info": {
+    "_postman_id": "161b8f20-2f25-4762-a16e-e8dbff4f188c",
+    "name": "Product Feedback API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17249289"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "bLola",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "bola@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "qweqweqwe",
+                  "type": "text"
+                },
+                {
+                  "key": "confirmPassword",
+                  "value": "qweqweqwe",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "email",
+                  "value": "lola@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "qweqweqwe",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/logout",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "logout"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Change Username",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "originalUsername",
+                  "value": "Lola",
+                  "type": "text"
+                },
+                {
+                  "key": "username",
+                  "value": "Lolaxoney",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "qweqweqwe",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/changeUsername",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "changeUsername"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Change Email",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "email",
+                  "value": "lolaxoney@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "qweqweqwe",
+                  "type": "text"
+                },
+                {
+                  "key": "originalEmail",
+                  "value": "lola@gmail.com",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/changeEmail",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "changeEmail"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Change Password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "Lolaxoney",
+                  "type": "text"
+                },
+                {
+                  "key": "currentPassword",
+                  "value": "qweqweqwe",
+                  "type": "text"
+                },
+                {
+                  "key": "newPassword",
+                  "value": "123123123",
+                  "type": "text"
+                },
+                {
+                  "key": "newConfirmPassword",
+                  "value": "123123123",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/changePassword",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "changePassword"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Account",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/deleteAccount/6344514603ca67f8766b9178",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "deleteAccount", "6344514603ca67f8766b9178"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Feedback",
+      "item": [
+        {
+          "name": "Get All Feedbacks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/feedback",
+              "host": ["{{baseUrl}}"],
+              "path": ["feedback"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Feedback",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/feedback/634fe1b2f449a68b568c16f0",
+              "host": ["{{baseUrl}}"],
+              "path": ["feedback", "634fe1b2f449a68b568c16f0"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Feedback",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzM2E5YTEzN2Q3ZDE0YjQ3NTA5M2EwYiIsInVzZXJuYW1lIjoiTG9sYSIsImlhdCI6MTY2NDc4NzYxOSwiZXhwIjoxNjY0Nzg4NTE5fQ.TPoAe4-HO6hwOkqNNo8RBrVY5sharTZmCPihAMvH0NA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-refresh-token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzM2E5YTEzN2Q3ZDE0YjQ3NTA5M2EwYiIsInVzZXJuYW1lIjoiTG9sYSIsImlhdCI6MTY2NDc4NzYxOSwiZXhwIjoxNjk2MzQ1MjE5fQ.akYQhJ5Z4wfh99gxqrMQBTN3v883xoOhndnc0-UKEAs",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "Main heading is too small",
+                  "type": "text"
+                },
+                {
+                  "key": "category",
+                  "value": "ENHANCEMENT",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "Heading of the home page is too small and not have enough weight",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/feedback/createFeedback",
+              "host": ["{{baseUrl}}"],
+              "path": ["feedback", "createFeedback"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edit Feedback",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "Make navbar responsive!!!",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "Website navigation bar is unresponsive to different screen sizes",
+                  "type": "text"
+                },
+                {
+                  "key": "category",
+                  "value": "ENHANCEMENT",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/feedback/6350aeeb7c206ee3cc97807a",
+              "host": ["{{baseUrl}}"],
+              "path": ["feedback", "6350aeeb7c206ee3cc97807a"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Feedback",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/feedback/6350aeeb7c206ee3cc97807a",
+              "host": ["{{baseUrl}}"],
+              "path": ["feedback", "6350aeeb7c206ee3cc97807a"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Vote Feedback",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "voteType",
+                  "value": "increment",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/feedback/voteFeedback/634fe1b2f449a68b568c16f0",
+              "host": ["{{baseUrl}}"],
+              "path": ["feedback", "voteFeedback", "634fe1b2f449a68b568c16f0"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Comment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "description",
+                  "value": "Am i WORNG?",
+                  "type": "text"
+                },
+                {
+                  "key": "username",
+                  "value": "Lolaxoney",
+                  "type": "text"
+                },
+                {
+                  "key": "feedback",
+                  "value": "634fe1b2f449a68b568c16f0",
+                  "type": "text"
+                },
+                {
+                  "key": "user",
+                  "value": "634e86f6d0c09b2aa0045d29",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/comment/createComment/634fe1b2f449a68b568c16f0",
+              "host": ["{{baseUrl}}"],
+              "path": ["comment", "createComment", "634fe1b2f449a68b568c16f0"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edit Comment",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "description",
+                  "value": "Yes u r wrong!",
+                  "type": "text"
+                },
+                {
+                  "key": "replyingTo",
+                  "value": "Lola",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/comment/634fe1b2f449a68b568c16f0/editComment/6350b0e4963cb3fcbd825886",
+              "host": ["{{baseUrl}}"],
+              "path": [
+                "comment",
+                "634fe1b2f449a68b568c16f0",
+                "editComment",
+                "6350b0e4963cb3fcbd825886"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Comment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/comment/634fe1b2f449a68b568c16f0/deleteComment/6350b0e4963cb3fcbd825886",
+              "host": ["{{baseUrl}}"],
+              "path": [
+                "comment",
+                "634fe1b2f449a68b568c16f0",
+                "deleteComment",
+                "6350b0e4963cb3fcbd825886"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Change Status",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "status",
+                  "value": "IN-PROGRESS",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/feedback/changeStatus/634fe1b2f449a68b568c16f0",
+              "host": ["{{baseUrl}}"],
+              "path": ["feedback", "changeStatus", "634fe1b2f449a68b568c16f0"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8800/api"
+    }
+  ]
+}
